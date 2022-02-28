@@ -30,6 +30,7 @@ public class CardDeliveryTest {
 
     @Test
     void shouldSendForm() {
+        open("http://localhost:9999/");
         $("[data-test-id=city] .input__control").setValue("Нижний Новгород");
         $("[data-test-id=date] [placeholder=\"Дата встречи\"]").sendKeys(Keys.chord(Keys.CONTROL + "A"), Keys.BACK_SPACE, delivery(false));
         $("[data-test-id=name] [name=name]").setValue("Войтенко Константин");
