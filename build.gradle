@@ -16,10 +16,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.jetbrains:annotations:20.1.0'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
     testImplementation 'com.codeborne:selenide:6.3.0'
-    testImplementation("io.github.bonigarcia:webdrivermanager:5.1.0")
 }
 
 test {

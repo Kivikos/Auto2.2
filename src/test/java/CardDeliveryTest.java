@@ -19,7 +19,7 @@ public class CardDeliveryTest {
 
     public String delivery(boolean date) {
         Calendar calendar = new GregorianCalendar();
-        calendar.add(Calendar.DATE, 3);
+        calendar.add(Calendar.DATE, 7);
         if (date) {
             return new SimpleDateFormat("d").format((calendar.getTime()));
         } else {
