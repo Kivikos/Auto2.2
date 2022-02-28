@@ -1,6 +1,9 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -11,6 +14,12 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class CardDeliveryTest {
+    private WebDriver driver;
+
+    @BeforeAll
+    public static void SetUpCLass() {
+        WebDriverManager.chromedriver().setup();
+    }
 
     @BeforeEach
     public void setUp() {
